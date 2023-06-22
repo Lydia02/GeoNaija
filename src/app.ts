@@ -24,7 +24,7 @@ app.use('/auth', rateLimiter, authRouter)
 app.use('/location', rateLimiter, locationRouter)
 
 app.get('/', (req: Request, res: Response): void => {
-    res.send('Welcome to the location api')
+    res.send("Welcome to GeoNaija, your premier destination for seamless exploration of Nigeria's vibrant regions, diverse states, and dynamic local government areas (LGAs).")
 })
 
 connectMongoDB()

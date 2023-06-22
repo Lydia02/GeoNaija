@@ -11,6 +11,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
+  "production": false,
   "keywords": [],
   "author": "",
   "license": "ISC",

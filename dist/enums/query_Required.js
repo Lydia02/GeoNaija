@@ -6,4 +6,4 @@ var InvalidQueryError;
     InvalidQueryError["REGION_ERROR"] = "region_name field is required";
     InvalidQueryError["STATE_ERROR"] = "state_name field is required";
     InvalidQueryError["LGA_ERROR"] = "lga_name field is required";
-})(InvalidQueryError = exports.InvalidQueryError || (exports.InvalidQueryError = {}));
+})(InvalidQueryError || (exports.InvalidQueryError = InvalidQueryError = {}));

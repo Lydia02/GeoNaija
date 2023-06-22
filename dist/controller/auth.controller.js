@@ -66,12 +66,12 @@ var bcrypt = __importStar(require("bcrypt"));
 var api_keys_model_1 = require("../models/api-keys.model");
 function signup(req, res) {
     return __awaiter(this, void 0, void 0, function () {
-        var regex, _a, email, password, first_name, last_name, retype_password, foundUser, API_key, apiKey, key, user, savedUser;
+        var regex, _a, email, password, firstname, lastname, retype_password, foundUser, API_key, apiKey, key, user, savedUser;
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
                     regex = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b/;
-                    _a = req.body, email = _a.email, password = _a.password, first_name = _a.first_name, last_name = _a.last_name, retype_password = _a.retype_password;
+                    _a = req.body, email = _a.email, password = _a.password, firstname = _a.firstname, lastname = _a.lastname, retype_password = _a.retype_password;
                     if (!regex.test(email)) return [3 /*break*/, 7];
                     return [4 /*yield*/, auth_model_1.userModel.findOne({ email: email })];
                 case 1:
@@ -83,6 +83,7 @@ function signup(req, res) {
                     }
                     if (foundUser) {
                         res.status(409).send("User already exists, try logging in");
+                        API_key;
                         return [2 /*return*/];
                     }
                     return [4 /*yield*/, api_keys_model_1.apiKeyModel.create({ API_key: API_key, createdAt: Date.now() })];
@@ -94,8 +95,8 @@ function signup(req, res) {
                     return [4 /*yield*/, auth_model_1.userModel.create({
                             email: email,
                             password: password,
-                            first_name: first_name,
-                            last_name: last_name,
+                            firstname: firstname,
+                            lastname: lastname,
                             retype_password: retype_password,
                             API_key_id: key._id,
                         })];
@@ -105,7 +106,7 @@ function signup(req, res) {
                 case 5:
                     savedUser = _b.sent();
                     key.user = savedUser._id;
-                    key.createdBy = "".concat(first_name, " ").concat(last_name);
+                    key.createdBy = "".concat(firstname, " ").concat(lastname);
                     return [4 /*yield*/, key.save()];
                 case 6:
                     _b.sent();
@@ -113,8 +114,8 @@ function signup(req, res) {
                         message: "Signup successful. Welcome",
                         user: {
                             email: email,
-                            first_name: first_name,
-                            last_name: last_name,
+                            firstname: firstname,
+                            lastname: lastname,
                         },
                         notice: "Please ensure that you write down this API_key, it is a view once, and cannot be retrieved, retrieving is $200. View API key below: ",
                         API_key: API_key

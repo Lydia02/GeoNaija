@@ -6,7 +6,7 @@ import { Request, Response } from 'express';
 
 async function signup(req: Request, res: Response): Promise<void | string> {
     const regex = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b/;
-    const { email, password, first_name, last_name, retype_password } = req.body;
+    const { email, password, firstname, lastname, retype_password } = req.body;
 
     if (regex.test(email)) {
         const foundUser = await userModel.findOne({ email });
@@ -19,6 +19,7 @@ async function signup(req: Request, res: Response): Promise<void | string> {
 
         if (foundUser) {
             res.status(409).send("User already exists, try logging in");
+            API_key
             return;
         }
 
@@ -27,8 +28,8 @@ async function signup(req: Request, res: Response): Promise<void | string> {
         const user = await userModel.create({
             email,
             password,
-            first_name,
-            last_name,
+            firstname,
+            lastname,
             retype_password,
             API_key_id: key._id,
         })
@@ -36,15 +37,15 @@ async function signup(req: Request, res: Response): Promise<void | string> {
         const savedUser = await user.save()
 
         key.user = savedUser._id;
-        key.createdBy = `${first_name} ${last_name}`;
+        key.createdBy = `${firstname} ${lastname}`;
         await key.save();
 
         res.status(201).json({
             message: "Signup successful. Welcome",
             user: {
                 email,
-                first_name,
-                last_name,
+                firstname,
+                lastname,
             },
             notice: "Please ensure that you write down this API_key, it is a view once, and cannot be retrieved, retrieving is $200. View API key below: ",
             API_key

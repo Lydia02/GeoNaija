@@ -82,9 +82,7 @@ The Locale API offers the following endpoints for integrating geographical data:
 
 ### API Usage
 
-To test the API on your local machine with Swagger, use the following URL:
-
-[here](localhost:3000/api-docs)
+To test the API on your local machine with Swagger, use the following URL: [click here](localhost:3000/api-docs)
 
 The API requires bearer token authorization. Include your API key in the Authorization header as follows:
 

@@ -8,9 +8,9 @@
  *         type: string
  *       password:
  *         type: string
- *       first_name:
+ *       firstname:
  *         type: string
- *       last_name:
+ *       lastname:
  *         type: string
  *       retype_password:
  *         type: string
@@ -35,8 +35,8 @@
  *           required:
  *             - email
  *             - password
- *             - first_name
- *             - last_name
+ *             - firstname
+ *             - lastname
  *             - retype_password
  *           properties:
  *             email:

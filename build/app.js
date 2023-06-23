@@ -24,7 +24,7 @@ app.use("/api-docs", swagger_ui_express_1.default.serve, swagger_ui_express_1.de
 app.use('/auth', rate_limiter_1.rateLimiter, auth_route_1.default);
 app.use('/location', rate_limiter_1.rateLimiter, location_route_1.default);
 app.get('/', function (req, res) {
-    res.send('Welcome to the location api');
+    res.send("Welcome to GeoNaija, your premier destination for seamless exploration of Nigeria's vibrant regions, diverse states, and dynamic local government areas (LGAs).");
 });
 (0, db_1.connectMongoDB)();
 app.listen(port, function () {

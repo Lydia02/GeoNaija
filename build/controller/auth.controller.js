@@ -117,7 +117,6 @@ function signup(req, res) {
                             firstname: firstname,
                             lastname: lastname,
                         },
-                        notice: "Please ensure that you write down this API_key, it is a view once, and cannot be retrieved, retrieving is $200. View API key below: ",
                         API_key: API_key
                     });
                     return [2 /*return*/];

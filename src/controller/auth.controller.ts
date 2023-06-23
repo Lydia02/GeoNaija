@@ -47,7 +47,6 @@ async function signup(req: Request, res: Response): Promise<void | string> {
                 firstname,
                 lastname,
             },
-            notice: "Please ensure that you write down this API_key, it is a view once, and cannot be retrieved, retrieving is $200. View API key below: ",
             API_key
         });
         return;

@@ -1,4 +1,3 @@
-
 # GEONAIJA
 Locale is an advanced developer tool offering extensive geographical information on Nigeria. Locale, a cutting-edge developer tool, provides developers with precise and up-to-date information on regions, states, and local government areas (L.G.A.s). If you create applications, websites, or services catering to Nigeria's sizable population of over 200 million individuals, Locale is a reliable resource to enhance your projects with precise geographical insights.
 Geonaija provides developers with a seamless way to integrate geographical data into their applications and services. By utilizing straightforward API requests, you can retrieve specific details about regions and states, simplifying the process of building location-based functionalities.
@@ -24,8 +23,6 @@ Geonaija provides developers with a seamless way to integrate geographical data 
 - Contribution
 - Author
 
-
-
 ## Data Information
 
 Geonaija  includes the following information for each region, state, and LGA:
@@ -48,16 +45,13 @@ Geonaija serves as a valuable resource for various purposes, including:
 ## Base URL
 locahost.process.env.PORT || [GeoNaija](https://geonaija.onrender.com/)
 
-
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js and npm installed on your local machine. [Install](https://nodejs.org/en/download/)
 - MongoDB installed on your local machine. [Install](https://docs.mongodb.com/manual/installation/)
-- Redis installed on your local machine. [this link](https://redis.io/docs/getting-started/) for guideline
-
-
+- Redis installed on your local machine. [this link](https://redis.io/docs/getting-started/)
 
 ### API Installation
 
@@ -66,14 +60,12 @@ locahost.process.env.PORT || [GeoNaija](https://geonaija.onrender.com/)
 3. Start the development server: run `npm start` to start the server
 4. Configure the environment variables: Create a .env file in the root directory of the project and add the following environment variables. Use the sample.env for reference
 
-
 ### Testing the server 
 
 1. Review API Documentation that provides detailed information about the available endpoints, request parameters, and response formats: Visit our website at [Postman Doc](https://documenter.getpostman.com/view/14148992/2s93z5A59G) 
 Read API Documentation here [Swagger Doc](https://geonaija.onrender.com/api-docs) 
 
 ### API Endpoints
--------------
 
 The Locale API offers the following endpoints for integrating geographical data:
 
@@ -89,18 +81,11 @@ The Locale API offers the following endpoints for integrating geographical data:
 
    This endpoint enables you to fetch the data of a specific Local Government Area (LGA) or retrieve information about all LGAs.
 
-
----.
-
 ### API Usage
 
-To test the API on your local machine with Swagger, use the following URL:
-
-[here](localhost:3000/api-docs)
+To test the API on your local machine with Swagger, use the following URL: [click here](localhost:3000/api-docs)
 
 The API requires bearer token authorization. Include your API key in the Authorization header as follows:
-
-
 
 Here is an example of how to use the API:
 ### **Signup
@@ -128,7 +113,7 @@ Here is an example of how to use the API:
     "API_key": "YOUR_API_KEY"
 }
 ```
-##Get State with LGA
+## Get State with LGA
 
 **Request:**
 - Route /location/state?state_name=oyo&lga=afijio
@@ -171,7 +156,7 @@ Here is an example of how to use the API:
     ]
 }
 ```
-##Get Region with LGA
+## Get Region with LGA
 
 **Request:**
 - Route //location/region?region_name=southsouth&lga=tai
@@ -276,7 +261,7 @@ Here is an example of how to use the API:
     ]
 }
 ```
-##Get Region with state
+## Get Region with state
 
 **Request:**
 - Route /location/region?region_name=southsouth&state=rivers
@@ -383,16 +368,14 @@ Here is an example of how to use the API:
 }
 ```
 
-
 ## Conclusion
+
 In conclusion, the Locale API provides developers with seamless access to accurate and up-to-date geographical information about Nigeria's regions, states, and Local Government Areas (LGAs), simplifying the development of location-based functionalities for businesses targeting Nigeria's diverse population. By integrating the Locale API, developers can leverage comprehensive data to create customized solutions that cater to specific regions, states, and LGAs, whether it's mapping applications, location-based services, or geographical analysis. With the power of Locale, developers can unlock new possibilities and deliver enhanced experiences to users by incorporating precise geographical data into their applications and services. For assistance and seamless integration of the Locale API, reach out to our support team at [email protected], and start leveraging the full potential of accurate and comprehensive geographical data for Nigeria's regions, states, and LGAs.
 
 
 
 ## Contribution
 If you would like to contribute to this project, please feel free to fork the repository, create a feature branch, and open a Pull Request!
-
----
 
 ## Author
 [Lydia Ojoawo](https://github.com/Lydia02)

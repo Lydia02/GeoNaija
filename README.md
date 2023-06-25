@@ -69,7 +69,8 @@ locahost.process.env.PORT || [GeoNaija](https://geonaija.onrender.com/)
 
 ### Testing the server 
 
-1. Review API Documentation that provides detailed information about the available endpoints, request parameters, and response formats: Visit our website at [Postman Doc](https://documenter.getpostman.com/view/14148992/2s93z5A59G) or [Swagger Doc](https://geonaija.onrender.com/api-docs) 
+1. Review API Documentation that provides detailed information about the available endpoints, request parameters, and response formats: Visit our website at [Postman Doc](https://documenter.getpostman.com/view/14148992/2s93z5A59G) 
+Read API Documentation here [Swagger Doc](https://geonaija.onrender.com/api-docs) 
 
 ### API Endpoints
 -------------

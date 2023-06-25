@@ -42,10 +42,10 @@
  *             email:
  *               type: string
  *               description: Email of the user
- *             first_name:
+ *             firstname:
  *               type: string
  *               description: User's first name
- *             last_name:
+ *             lastname:
  *               type: string
  *               description: User's last name
  *             password:
